@@ -1,4 +1,10 @@
-import { BackgroundLayer, PlayingField, Header, Main } from '@/components'
+import {
+  BackgroundLayer,
+  PlayingField,
+  Header,
+  Main,
+  Counter,
+} from '@/components'
 import { GameStore } from '@/store'
 export class App {
   constructor(root) {
@@ -10,14 +16,18 @@ export class App {
     this.main = new Main()
     this.store = new GameStore()
     this.header = new Header(this.store)
-    this.field = new PlayingField(this.store)
-    this.field.render()
-    this.main.element.append(this.header.element, this.field.element)
-    this.root.append(this.bg.element, this.main.element)
-
     this.header.onNewGame = () => {
-      console.log('new game clicked')
       this.store.startGame()
     }
+    this.field = new PlayingField(this.store)
+    this.field.render()
+
+    this.counter = new Counter(this.store)
+    this.counter.render()
+
+    this.header.element.append(this.counter.element)
+
+    this.main.element.append(this.header.element, this.field.element)
+    this.root.append(this.bg.element, this.main.element)
   }
 }

@@ -1,7 +1,6 @@
 import style from './header.module.css'
-import { Counter } from '@/components'
 export class Header {
-  constructor(store) {
+  constructor() {
     this.element = document.createElement('header')
     this.element.className = style['header']
     this.newGameBtn = document.createElement('button')
@@ -10,8 +9,7 @@ export class Header {
     this.leadersBtn.textContent = 'Таблица лидеров'
     this.onNewGame = () => {}
     this.onShowLeaders = () => {}
-
-    this.element.append(this.newGameBtn, this.leadersBtn, new Counter())
+    this.element.append(this.newGameBtn, this.leadersBtn)
 
     this.newGameBtn.addEventListener('click', () => this.onNewGame())
     this.leadersBtn.addEventListener('click', this.onShowLeaders)
