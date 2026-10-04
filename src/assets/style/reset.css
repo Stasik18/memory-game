@@ -10,12 +10,14 @@
 /* 2. Базовые настройки body */
 body {
   min-height: 100vh;
+  overflow: hidden;
   text-rendering: optimizeLegibility;
 }
 
 /* 3. Убираем маркеры списков (вернешь классами где нужно) */
 ul,
-ol {
+ol,
+li {
   list-style: none;
 }
 
