@@ -1,0 +1,56 @@
+/* 1. Убираем отступы и задаем box-sizing глобально */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 2. Базовые настройки body */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeLegibility;
+}
+
+/* 3. Убираем маркеры списков (вернешь классами где нужно) */
+ul,
+ol {
+  list-style: none;
+}
+
+/* 4. Картинки и медиа не вылезают за контейнер */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* 5. Наследование шрифтов для форм и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+/* 6. Убираем стандартные стили ссылок */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 7. Таблицы без двойных границ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+button {
+  border: none;
+}

@@ -1,0 +1,41 @@
+:root {
+  /*animation*/
+  --transition-duration: 0.2s;
+  --transition-duration-long: 0.4s;
+  --transition-timing: ease;
+
+  /* color */
+  --color-text-primary: #e0e0e0;
+  --color-text-inverse: #2b2b2b;
+  --color-text-accent: #8b8b8b;
+  --color-bg-page: #2b2b2b;
+  --color-bg-container: #3c3c3c;
+  --color-bg-overlay: rgba(43, 43, 43, 0.9);
+  --color-border-primary: #5a5a5a;
+  --color-border-inverse: #c6c6c6;
+
+  /* font */
+  --font-h1: 400 72px/105% 'Minecraftia', monospace;
+  --font-h1-accent: 400 72px/105% 'Minecraftia', monospace;
+  --font-h2: 400 60px/125% 'Minecraftia', monospace;
+  --font-h2-accent: 400 60px/125% 'Minecraftia', monospace;
+  --font-h3: 400 24px/125% 'Minecraftia', monospace;
+  --font-body-medium: 400 16px/150% 'Minecraftia', monospace;
+  --font-caption: 400 10px/140% 'Minecraftia', monospace;
+  --font-action: 400 16px/150% 'Minecraftia', monospace;
+  --font-burger: 400 32px/125% 'Minecraftia', monospace;
+  --font-h1-m: 400 42px/115% 'Minecraftia', monospace;
+  --font-h2-m: 400 32px/125% 'Minecraftia', monospace;
+}
+
+/* color dark theme*/
+[data-theme='dark'] {
+  --color-text-primary: #d4d4d4;
+  --color-text-inverse: #1a1a1a;
+  --color-text-accent: #a0a0a0;
+  --color-bg-page: #1a1a1a;
+  --color-bg-container: #2d2d2d;
+  --color-bg-overlay: rgba(26, 26, 26, 0.9);
+  --color-border-primary: #4a4a4a;
+  --color-border-inverse: #b0b0b0;
+}

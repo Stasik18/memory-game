@@ -1,0 +1,28 @@
+.ease-transition {
+  transition:
+    background-color var(--transition-duration) var(--transition-timing),
+    color var(--transition-duration) var(--transition-timing),
+    fill var(--transition-duration) var(--transition-timing),
+    box-shadow var(--transition-duration) var(--transition-timing),
+    border-color var(--transition-duration) var(--transition-timing),
+    outline var(--transition-duration) var(--transition-timing),
+    transform var(--transition-duration) var(--transition-timing),
+    opacity var(--transition-duration) var(--transition-timing),
+    outline var(--transition-duration) var(--transition-timing),
+    visibility var(--transition-duration) var(--transition-timing),
+    transform-origin var(--transition-duration) var(--transition-timing);
+}
+
+.ease-transition::after {
+  transition: transform var(--transition-duration) var(--transition-timing);
+}
+
+.forHidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip-path: inset(50%) !important;
+  white-space: nowrap !important;
+}
