@@ -45,7 +45,7 @@ export class GameStore {
     this.listeners = []
     this.timerId = null
   }
-  #getState() {
+  getState() {
     return {
       cards: this.cards,
       moves: this.moves,
@@ -60,7 +60,7 @@ export class GameStore {
   }
 
   notify() {
-    this.listeners.map((listener) => listener(this.#getState()))
+    this.listeners.forEach((listener) => listener(this.getState()))
   }
 
   startGame() {
