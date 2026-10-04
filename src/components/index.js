@@ -1,5 +1,5 @@
 export { BackgroundLayer } from './background-layer/background-layer.js'
-// export { Card } from './card/card.js'
+export { Card } from './card/card.js'
 // export { Counters } from './counters/counters.js'
 // export { Footer } from './footer/footer.js'
 export { Header } from './header/header.js'
