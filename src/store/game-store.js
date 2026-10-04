@@ -77,7 +77,6 @@ export class GameStore {
   flipCard(uid) {
     if (this.isLocked) return
     if (this.isGameOver) return
-
     const currentCard = this.cards.find((card) => card.uid === uid)
     if (currentCard.isMatched) return
     if (currentCard.isFlipped) return
