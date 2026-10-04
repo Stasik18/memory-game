@@ -1,0 +1,6 @@
+.bg-layer {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: url('@/assets/img/playing-field.webp') center/cover no-repeat;
+}
