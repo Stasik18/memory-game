@@ -2,7 +2,6 @@ import style from './counter.module.css'
 
 export class Counter {
   constructor(store) {
-    console.log(store)
     this.store = store
     this.state = store.getState()
     this.element = document.createElement('div')

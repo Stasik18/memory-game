@@ -17,6 +17,7 @@ export class LeaderboardModal {
     this.closeBtn = document.createElement('button')
     this.closeBtn.textContent = 'Закрыть'
     this.closeBtn.className = style['close-btn']
+    this.closeBtn.setAttribute('aria-label', 'Закрыть таблицу лидеров')
 
     this.element.append(this.title, this.list, this.closeBtn)
 

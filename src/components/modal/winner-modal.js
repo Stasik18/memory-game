@@ -14,9 +14,12 @@ export class WinnerModal {
     this.newGameBtn = document.createElement('button')
     this.newGameBtn.className = style['new-game-btn']
     this.newGameBtn.textContent = 'Новая игра'
+    this.newGameBtn.setAttribute('aria-label', 'Начать новую игру')
     this.closeModalBtn = document.createElement('button')
     this.closeModalBtn.className = style['close-modal-btn']
     this.closeModalBtn.textContent = 'Закрыть'
+    this.closeModalBtn.setAttribute('aria-label', 'Закрыть окно конца игры')
+
     this.element.append(this.title, this.infoPanel, this.actionPanel)
     this.actionPanel.append(this.newGameBtn, this.closeModalBtn)
 

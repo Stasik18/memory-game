@@ -2,7 +2,21 @@
 
 ### Выполнил git: [`Stasik18`](https://github.com/stasik18), tg: [`@StasBgtk`](https://t.me/StasBgtk)
 
-## Кратская инструкция по пользованию
+## [`Демо`](https://stasik18.github.io/memory-game/)
+
+## О проекте
+
+Memory Game — игра на поиск пар в стиле Minecraft.
+16 карточек, 8 пар, счётчик ходов, таблица лидеров
+(топ-10 в localStorage), модалки победы и лидеров
+
+## Технологии
+
+- Vanilla JS (ES-модули, классы)
+- Vite
+- CSS-модули
+
+## Краткая инструкция по пользованию
 
 ```bash
 npm i
@@ -11,7 +25,7 @@ npm i
 
 ```bash
 npm run dev
-# заупск в режиме разработки
+# запeск в режиме разработки
 
 # Запустит локалку http://localhost:5173
 ```
@@ -24,13 +38,13 @@ npm run build
 ```
 
 ```bash
-npm run preveiw
+npm run preview
 # просмотр собранного в build
 ```
 
 ```bash
 npm run lint
-# заупск линтера
+# запуск линтера
 
 # проверка кода
 ```
@@ -39,4 +53,4 @@ npm run lint
 
 ### В проекте настроен алиас `@`, указывающий на корень папки `src`
 
-### Пример: `import Button from '@/components/Button'`
+### Пример: `import {Card} from '@/components'`
