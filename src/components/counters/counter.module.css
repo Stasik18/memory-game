@@ -1,0 +1,16 @@
+.counter {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-primary);
+  font: var(--font-action-m);
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.6);
+
+  .matched,
+  .moves {
+    padding: 19px 25px 0px 25px;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 4px;
+  }
+}
