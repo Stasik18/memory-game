@@ -68,6 +68,8 @@ export class GameStore {
     this.timerId = null
     this.firstCard = null
     this.secondCard = null
+    this.moves = 0
+    this.matchPairs = 0
     this.isLocked = false
     this.isGameOver = false
     this.cards = createGameCard()

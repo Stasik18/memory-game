@@ -12,6 +12,6 @@ export class Header {
     this.element.append(this.newGameBtn, this.leadersBtn)
 
     this.newGameBtn.addEventListener('click', () => this.onNewGame())
-    this.leadersBtn.addEventListener('click', this.onShowLeaders)
+    this.leadersBtn.addEventListener('click', () => this.onShowLeaders())
   }
 }

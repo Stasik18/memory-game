@@ -5,7 +5,7 @@ export class PlayingField {
   constructor(store) {
     this.store = store
     this.cardByElement = new Map()
-    this.element = document.createElement('div')
+    this.element = document.createElement('ul')
     this.element.className = style['playing-field']
   }
 

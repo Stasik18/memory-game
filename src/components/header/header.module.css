@@ -1,2 +1,37 @@
 .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  gap: 20px;
+  height: 100px;
+  margin-bottom: 100px;
+
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font: var(--font-action-m);
+    color: #fff;
+    padding: 20px 40px 5px 40px;
+    cursor: pointer;
+    border: none;
+    background: #7a7a7a;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
+    box-shadow:
+      inset -3px -3px 0 0 #4a4a4a,
+      inset 3px 3px 0 0 #b0b0b0;
+    image-rendering: pixelated;
+    transition: background var(--transition-duration) var(--transition-timing);
+  }
+
+  button:hover {
+    background: #8a8a8a;
+  }
+
+  button:active {
+    box-shadow:
+      inset 3px 3px 0 0 #4a4a4a,
+      inset -3px -3px 0 0 #b0b0b0;
+  }
 }

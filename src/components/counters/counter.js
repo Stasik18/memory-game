@@ -16,8 +16,8 @@ export class Counter {
   }
 
   update(state) {
-    this.moves.textContent = `${state.moves}`
-    this.matched.textContent = `${state.matchedPairs} / 8`
+    this.moves.textContent = `Ходы: ${state.moves}`
+    this.matched.textContent = `Пары: ${state.matchedPairs} / 8`
   }
 
   render() {
