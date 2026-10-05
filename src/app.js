@@ -20,7 +20,8 @@ export class App {
     this.store = new GameStore()
     this.header = new Header(this.store)
     this.header.onNewGame = () => {
-      this.store.startGame()
+      this.field.closeAllCards()
+      setTimeout(() => this.store.startGame(), 400)
     }
 
     this.field = new PlayingField(this.store)
@@ -33,7 +34,6 @@ export class App {
     this.leaderboard = new Leaderboard()
     this.leaderboardModal = new LeaderboardModal(this.leaderboard)
     this.modal = new Modal()
-
     this.leaderboardModal.onClose = () => this.modal.close()
 
     this.winnerModal.onClose = () => {
@@ -45,14 +45,12 @@ export class App {
       this.store.startGame()
     }
     this.header.onShowLeaders = () => {
-      console.log(12)
       this.leaderboardModal.update()
       this.modal.open(this.leaderboardModal.element)
     }
 
     this.store.subscribe((state) => {
       if (state.isGameOver && !this.isWinnerModalOpen) {
-        console.log(this.winnerModal)
         this.winnerModal.update(state.moves)
         this.leaderboard.addResult({ moves: state.moves, date: Date.now() })
         this.modal.open(this.winnerModal.element)

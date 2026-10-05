@@ -21,6 +21,7 @@ export class Card {
     this.img1.className = style['img-back']
     this.img1.src = BACK_CARD
     this.img1.width = '200'
+    // this.img1.fetchpriority = "high"
 
     this.img2.className = style['img-content']
     this.img2.src = this.card.image
@@ -30,5 +31,9 @@ export class Card {
   render() {
     this.element.classList.toggle(style['is-flipped'], this.card.isFlipped)
     this.element.classList.toggle(style['is-matched'], this.card.isMatched)
+  }
+
+  close(){
+      this.element.classList.remove(style['is-flipped'])
   }
 }

@@ -38,11 +38,16 @@ export class PlayingField {
     })
   }
 
+  closeAllCards() {
+    for (const card of this.cardByElement.values()) {
+      card.close()
+    }
+  }
+
   handleClick(event) {
     const clickCard = event.target.closest('li')
 
     if (!clickCard) return
-    console.log(this.cardByElement.get(clickCard).card)
 
     this.store.flipCard(this.cardByElement.get(clickCard).card.uid)
   }
