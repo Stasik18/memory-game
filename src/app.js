@@ -4,8 +4,11 @@ import {
   Header,
   Main,
   Counter,
+  Modal,
+  WinnerModal,
+  LeaderboardModal,
 } from '@/components'
-import { GameStore } from '@/store'
+import { GameStore, Leaderboard } from '@/store'
 export class App {
   constructor(root) {
     this.root = root
@@ -19,14 +22,48 @@ export class App {
     this.header.onNewGame = () => {
       this.store.startGame()
     }
+
     this.field = new PlayingField(this.store)
     this.field.render()
 
     this.counter = new Counter(this.store)
     this.counter.render()
+    this.isWinnerModalOpen = false
+    this.winnerModal = new WinnerModal()
+    this.leaderboard = new Leaderboard()
+    this.leaderboardModal = new LeaderboardModal(this.leaderboard)
+    this.modal = new Modal()
 
-    this.header.element.append(this.counter.element)
+    this.leaderboardModal.onClose = () => this.modal.close()
 
+    this.winnerModal.onClose = () => {
+      this.isWinnerModalOpen = false
+      this.modal.close()
+    }
+    this.winnerModal.onNewGame = () => {
+      this.winnerModal.onClose()
+      this.store.startGame()
+    }
+    this.header.onShowLeaders = () => {
+      console.log(12)
+      this.leaderboardModal.update()
+      this.modal.open(this.leaderboardModal.element)
+    }
+
+    this.store.subscribe((state) => {
+      if (state.isGameOver && !this.isWinnerModalOpen) {
+        console.log(this.winnerModal)
+        this.winnerModal.update(state.moves)
+        this.leaderboard.addResult({ moves: state.moves, date: Date.now() })
+        this.modal.open(this.winnerModal.element)
+        this.isWinnerModalOpen = true
+      }
+    })
+
+    this.header.element.insertBefore(
+      this.counter.element,
+      this.header.leadersBtn
+    )
     this.main.element.append(this.header.element, this.field.element)
     this.root.append(this.bg.element, this.main.element)
   }

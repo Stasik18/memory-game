@@ -17,12 +17,13 @@
   /* font */
   --font-h1: 400 72px/105% 'Minecraftia', monospace;
   --font-h1-accent: 400 72px/105% 'Minecraftia', monospace;
-  --font-h2: 400 60px/125% 'Minecraftia', monospace;
-  --font-h2-accent: 400 60px/125% 'Minecraftia', monospace;
+  --font-h2: 400 32px/125% 'Minecraftia', monospace;
+  --font-h2-accent: 400 32px/125% 'Minecraftia', monospace;
   --font-h3: 400 24px/125% 'Minecraftia', monospace;
   --font-body-medium: 400 16px/150% 'Minecraftia', monospace;
   --font-caption: 400 10px/140% 'Minecraftia', monospace;
   --font-action: 400 16px/150% 'Minecraftia', monospace;
+  --font-action-m: 400 24px/150% 'Minecraftia', monospace;
   --font-burger: 400 32px/125% 'Minecraftia', monospace;
   --font-h1-m: 400 42px/115% 'Minecraftia', monospace;
   --font-h2-m: 400 32px/125% 'Minecraftia', monospace;
